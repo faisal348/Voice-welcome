@@ -29,7 +29,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
   if (oldState.member.user.bot) return;
   if (
     newState.channelID === targetedVoiceChannel &&
-    oldState.channelID === null
+    !oldState.channelID
   ) {
     distube.playVoiceChannel(
       newState.member.voice.channel,
