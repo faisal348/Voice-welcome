@@ -7,8 +7,8 @@ const { SoundCloudPlugin } = require("@distube/soundcloud");
 const { SpotifyPlugin } = require("@distube/spotify");
 const Distube = require("distube");
 
-const targetedVoiceChannel = "861075863554228267";
-const voiceLogChannel = "898937103667322880";
+const targetedVoiceChannel = "";
+const voiceLogChannel = "";
 
 const distube = new Distube.default(client, {
   searchSongs: 1,
@@ -27,10 +27,7 @@ client.on("ready", () => {
 
 client.on("voiceStateUpdate", (oldState, newState) => {
   if (oldState.member.user.bot) return;
-  if (
-    newState.channelID === targetedVoiceChannel &&
-    !oldState.channelID
-  ) {
+  if (newState.channel.id === targetedVoiceChannel) {
     distube.playVoiceChannel(
       newState.member.voice.channel,
       "https://youtu.be/Dpe3zKCRBB0",
