@@ -19,6 +19,9 @@
     "distube": "^3.0.5",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.1",
-    "libsodium-wrappers": "^0.7.9"
+    "libsodium-wrappers": "^0.7.9",
+    "opusscript": "0.0.8",
+    "ytdl": "^1.4.1",
+    "ytdl-core": "^4.11.0"
   }
 }
