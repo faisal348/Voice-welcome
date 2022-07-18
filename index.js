@@ -40,7 +40,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
 });
 
 distube.on("playSong", (queue, song) => {
-  queue.textChannel.send(`هناك شخص دخل روم الدعم الفني : <@!${"أيدي رتبة"}>`);
+  queue.textChannel.send(`هناك شخص دخل روم الدعم الفني : <@!${"998401487938011187"}>`);
 });
 
 client.login(process.env.token);
